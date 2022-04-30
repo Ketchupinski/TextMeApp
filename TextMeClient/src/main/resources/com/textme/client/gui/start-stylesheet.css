@@ -1,0 +1,26 @@
+.root {
+    -fx-background-color: #ffffff;
+}
+
+.label {
+    -fx-font-family: LLucida Grande;
+}
+
+#welcomeLabel {
+    -fx-font-size: 24;
+}
+
+#logoLabel {
+    -fx-font-size: 14;
+    -fx-text-fill: #272424;
+}
+
+.button {
+    -fx-background-color: #1A73E8;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 14;
+}
+
+
+
+

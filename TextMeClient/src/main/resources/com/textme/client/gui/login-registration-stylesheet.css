@@ -1,0 +1,46 @@
+.root {
+    -fx-background-color: #ffffff;
+}
+
+.label {
+    -fx-font-family: Lucida Grande;
+}
+.text-field {
+    -fx-font-family: Lucida Grande;
+    -fx-font-size: 12;
+}
+
+.pass-field {
+    -fx-font-family: Lucida Grande;
+    -fx-font-size: 12;
+}
+
+.button {
+    -fx-background-color: #1A73E8;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 14;
+}
+
+#titleLabel {
+    -fx-font-size: 30;
+}
+
+#logoLabel {
+    -fx-font-size: 14;
+    -fx-text-fill: #272424;
+}
+
+#passLabel {
+    -fx-font-size: 14;
+}
+
+#loginLabel {
+    -fx-font-size: 14;
+}
+
+
+
+
+
+
+
