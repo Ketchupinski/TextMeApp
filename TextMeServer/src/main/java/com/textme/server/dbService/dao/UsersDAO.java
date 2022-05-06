@@ -5,6 +5,7 @@ import com.textme.server.dbService.executor.Executor;
 
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.Queue;
 
 public class UsersDAO {
     private final Executor executor;
@@ -19,6 +20,14 @@ public class UsersDAO {
                 return new UsersDataSet(result.getLong(1),
                         result.getString(2),
                         result.getString(3));
+            } return null;
+        });
+    }
+
+    public String getUserLogin(long id) throws SQLException {
+        return executor.execQuery("select * from users where id=" + id, result -> {
+            if (result.next()) {
+                return result.getString(2);
             } return null;
         });
     }

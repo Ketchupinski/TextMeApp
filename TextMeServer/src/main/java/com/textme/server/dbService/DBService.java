@@ -7,7 +7,7 @@ import com.textme.server.dbService.dataSets.UsersDataSet;
 
 import java.lang.reflect.InvocationTargetException;
 import java.sql.*;
-import java.util.Queue;
+import java.util.*;
 
 public class DBService {
     private final Connection connection;
@@ -109,17 +109,68 @@ public class DBService {
         }
     }
 
+    public synchronized Queue<MessagesDataSet> mergingQueues
+            (Queue<MessagesDataSet> qOne, Queue<MessagesDataSet> qTwo) {
+        Queue<MessagesDataSet> mQueue = new PriorityQueue<>
+                (Comparator.comparing(MessagesDataSet::getMessageTime));
+        Iterator<MessagesDataSet> i1 = qOne.iterator();
+        Iterator<MessagesDataSet> i2 = qTwo.iterator();
+        do {
+            if (i1.hasNext()) {
+                mQueue.add(i1.next());
+            }
+            if (i2.hasNext()) {
+                mQueue.add(i2.next());
+            }
+        } while (i1.hasNext() || i2.hasNext());
+        return mQueue;
+    }
+
+    public synchronized Queue<MessagesDataSet> sortQueue(Queue<MessagesDataSet> queue) {
+        Queue<MessagesDataSet> mQueue = new PriorityQueue<>
+                (Comparator.comparing(MessagesDataSet::getMessageTime));
+        mQueue.addAll(queue);
+        return mQueue;
+    }
+
     public synchronized Queue<MessagesDataSet> getMessages(String fromUserLogin, String toUserLogin) throws DBException {
         try {
             UsersDAO userDAO = new UsersDAO(connection);
             MessageDAO messageDAO = new MessageDAO(connection);
             long fromUserID = userDAO.getUserId(fromUserLogin);
             long toUserID = userDAO.getUserId(toUserLogin);
-            return messageDAO.getMessagesByUsers(fromUserID, toUserID);
+            Queue<MessagesDataSet> messagesOne = messageDAO.getMessagesByUsers(fromUserID, toUserID);
+            Queue<MessagesDataSet> messagesTwo = messageDAO.getMessagesByUsers(toUserID, fromUserID);
+            if (messagesOne != null && messagesTwo != null) {
+                return mergingQueues(messagesOne, messagesTwo);
+            } else if (messagesOne == null) {
+                return sortQueue(messagesTwo);
+            } else {
+                return sortQueue(messagesOne);
+            }
         } catch (SQLException e) {
             throw new DBException(e);
         }
     }
+
+    public synchronized Queue<String> getUserDialogues(long fromUser) {
+        try {
+            MessageDAO messageDAO = new MessageDAO(connection);
+            UsersDAO userDAO = new UsersDAO(connection);
+
+            Queue<Long> dialogues = messageDAO.getUserDialogues(fromUser);
+            Queue<String> dialoguesNames = new LinkedList<>();
+
+            while(!dialogues.isEmpty()) {
+                long userID = dialogues.poll();
+                dialoguesNames.add(userDAO.getUserLogin(userID));
+            }
+            return dialoguesNames;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 
     public synchronized void printConnectInfo() {
         try {
@@ -132,7 +183,7 @@ public class DBService {
         }
     }
 
-    public synchronized static Connection getPostgresConnection() {
+    public synchronized static Connection getPostgresConnection() { // todo: make connection from prop file
         try {
             DriverManager.registerDriver((Driver) Class.forName("org.postgresql.Driver").
                     getDeclaredConstructor().newInstance());
@@ -155,5 +206,6 @@ public class DBService {
         }
         return null;
     }
+
 
 }

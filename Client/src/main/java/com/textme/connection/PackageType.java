@@ -2,8 +2,8 @@ package com.textme.connection;
 
 public enum PackageType {
     GET_USER_DIALOGUES,
-    SEND_USER_DIALOGUES,
     GET_NEW_MESSAGE,
+    SEND_USER_DIALOGUES,
     SEND_USER_MESSAGES,
     SEND_USER_MESSAGES_END,
     SEND_USER_DIALOGUES_END,

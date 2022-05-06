@@ -26,7 +26,7 @@ public class ServerThread extends Thread {
 
     @Override
     public void run() {
-        try { // todo: user authorization system
+        try {
             Connection connection = new Connection(socket);
             listenResponse(connection);
         } catch (Exception ignore) {
@@ -38,7 +38,7 @@ public class ServerThread extends Thread {
         while(true) {
             Package response = connection.receive();
 
-            if (response.getType() == PackageType.SEND_TEXT_MESSAGE &&
+            if (response.getType() == PackageType.SEND_TEXT_MESSAGE && // todo: send another package with GET_NEW_MESSAGE to end user
                     response.getMessageText() != null) {
                 String messageText = response.getMessageText();
                 try {
@@ -47,22 +47,24 @@ public class ServerThread extends Thread {
                     e.printStackTrace();
                 }
                 System.out.println("Message has been added!");
-            } else if (response.getType() == PackageType.GET_USER_MESSAGES
+            } else if (response.getType() == PackageType.GET_USERS_MESSAGES
                     && response.getFromUser() != null
                     && response.getToUser() != null
             ) {
-                Queue<MessagesDataSet> messages = null;
-                messages = dbService.getMessages(response.getFromUser(), response.getToUser());
-                MessagesDataSet peek = Objects.requireNonNull(messages).peek();
-                while(peek != null) {
-                    connection.send(new Package(PackageType.GET_USER_MESSAGES,
-                            Objects.requireNonNull(peek).getMessageText(),
-                            response.getFromUser(),
-                            response.getToUser(),
-                            peek.getMessageTime()));
-                    messages.remove();
-                    peek = messages.peek();
+                Queue<MessagesDataSet> messages = dbService.getMessages(response.getFromUser(), response.getToUser());
+
+                while(!messages.isEmpty()) {
+                    MessagesDataSet top = messages.poll();
+                    String toUser = dbService.getUser(top.getToUserID()).getUserName();
+                    String fromUser = dbService.getUser(top.getFromUserID()).getUserName();
+                    connection.send(new Package(PackageType.SEND_USER_MESSAGES,
+                            top.getMessageText(),
+                            fromUser,
+                            toUser,
+                            top.getMessageTime()));
                 }
+                connection.send(new Package(PackageType.SEND_USER_MESSAGES_END,
+                        "All messages has been delivered!"));
 
             } else if(response.getType() == PackageType.USER_REGISTRATION) {
                 String info = response.getMessageText();
@@ -72,6 +74,8 @@ public class ServerThread extends Thread {
                             information[0] + " " + information[1]));
                 } else {
                     dbService.addUser(information[0], information[1]);
+                    String newUserGreetings = "Hello, we are happy to see you at TextMe™ messenger. This is a simple, helpful messaging app that keeps you connected with the people who matter most. You can start new dialogue just pressing \"+\" button. If you have some troubles or propositions you can contact us just right here. Good texting!"; // todo: maybe make reading from property file and db connection too
+                    dbService.addMessage(newUserGreetings, "admin", information[0]); // greeting message
                     connection.send(new Package(PackageType.USER_REGISTERED_SUCCESSFULLY,
                             information[0] + " " + information[1]));
                 }
@@ -96,8 +100,16 @@ public class ServerThread extends Thread {
 
             } else if (response.getType() == PackageType.USER_LOG_OUT) {
                 connection.close();
-                this.st
                 return;
+            } else if (response.getType() == PackageType.GET_USER_DIALOGUES) {
+                long id = dbService.getUserID(response.getFromUser());
+                Queue<String> dialogues = dbService.getUserDialogues(id);
+                StringBuilder result = new StringBuilder();
+                while(!dialogues.isEmpty()) {
+                    result.append(dialogues.poll()).append(",");
+                }
+                Package pack = new Package(PackageType.SEND_USER_DIALOGUES, result.toString());
+                connection.send(pack);
             }
         }
     }
