@@ -1,24 +1,23 @@
 package com.textme.client.controllers;
 
-import com.textme.client.Main;
-import com.textme.client.service.Initializer;
+import com.textme.client.service.ListenService;
+import com.textme.client.service.Connector;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
-import java.util.Queue;
 import java.util.ResourceBundle;
 import java.util.concurrent.ExecutionException;
 
 public class MessagesController implements Initializable {
-    private static final Initializer initializer = new Initializer();
-
-    public static Initializer getInitializer() {
-        return initializer;
-    }
     @FXML
     public ListView<String> messagesList;
     @FXML
@@ -27,16 +26,20 @@ public class MessagesController implements Initializable {
     public ScrollPane textPane;
     @FXML
     public Button sendMessageButton;
-
+    @FXML
     public VBox messagesBox;
+
+    private final ListenService listenService = new ListenService(this);
+    public Button newDialogue;
+    public TextField newDialogueField;
+    public Label userNick;
 
     @FXML
     public void sendMessage() throws IOException {
         if (!messageText.getText().isEmpty()) {
-            Main.getClient().sendNewTextMessage(
+            Connector.getClient().sendNewTextMessage(
                     messagesList.getSelectionModel().getSelectedItem(),
                     messageText.getText());
-            initializer.newMessage(textPane, messagesBox, messageText.getText(), false);
             messageText.clear();
         }
     }
@@ -44,23 +47,30 @@ public class MessagesController implements Initializable {
     @FXML
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        String[] dialogues;
+        userNick.setText(Connector.getClient().getClientLogin());
+        listenService.start();
         try {
-            dialogues = Main.getClient().getDialoguesList();
+            Connector.getClient().getDialoguesList();
         } catch (IOException | ClassNotFoundException | ExecutionException | InterruptedException e) {
             throw new RuntimeException(e);
         }
-        messagesList.getItems().addAll(dialogues);
         messagesList.getSelectionModel().selectedItemProperty().addListener((observableValue, s, t1) -> {
             messagesBox.getChildren().clear();
             String currentSelected = messagesList.getSelectionModel().getSelectedItem();
             try {
-                Queue<String[]> messages = Main.getClient().getDialogueMessages(currentSelected);
-                initializer.processDialogueMessages(messages, textPane, messagesBox);
-                Main.getClient().listenMassages(currentSelected, textPane, messagesBox); // starting thread that listen messages
+                Connector.getClient().getDialogueMessages(currentSelected);
             } catch (IOException | ExecutionException | InterruptedException e) {
                 throw new RuntimeException(e);
             }
         });
+    }
+
+
+    public void startNewDialogue(ActionEvent actionEvent)
+            throws IOException, ExecutionException, ClassNotFoundException, InterruptedException {
+        if (!newDialogueField.getText().isEmpty()) {
+            Connector.getClient().sendNewTextMessage(newDialogueField.getText(), "Hi!");
+            Connector.getClient().getDialoguesList();
+        }
     }
 }

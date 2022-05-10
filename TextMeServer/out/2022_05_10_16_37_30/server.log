@@ -1,0 +1,20 @@
+[05-10 16:37:51,259, 21357] com.textme.server.ServerThread New thread started!
+[05-10 16:37:51,301, 21399] com.textme.server.ServerThread User 123 successfully authorized
+[05-10 16:37:51,899, 21997] com.textme.server.ServerThread User tester1 updated dialogues
+[05-10 16:38:00,251, 30349] com.textme.server.ServerThread New thread started!
+[05-10 16:38:00,263, 30361] com.textme.server.ServerThread User 123 successfully authorized
+[05-10 16:38:00,822, 30920] com.textme.server.ServerThread User tester2 updated dialogues
+[05-10 16:38:07,686, 37784] com.textme.server.ServerThread Sent updating messages from user: tester2 to user: tester1 message text: Hi!
+[05-10 16:38:07,689, 37787] com.textme.server.ServerThread Sent updating messages from user: tester2 to user: tester1 message text: How are you?
+[05-10 16:38:07,691, 37789] com.textme.server.ServerThread Sent updating messages from user: tester2 to user: tester1 message text: What is your plans for today?
+[05-10 16:38:08,741, 38839] com.textme.server.ServerThread Sent updating messages from user: tester1 to user: tester2 message text: Hi!
+[05-10 16:38:08,742, 38840] com.textme.server.ServerThread Sent updating messages from user: tester1 to user: tester2 message text: How are you?
+[05-10 16:38:08,743, 38841] com.textme.server.ServerThread Sent updating messages from user: tester1 to user: tester2 message text: What is your plans for today?
+[05-10 16:38:13,895, 43993] com.textme.server.ServerThread New message has been added. From user: tester1 To user: tester2 Message text: Hi!
+[05-10 16:38:13,896, 43994] com.textme.server.ServerThread New message has been sent. From user: tester1 To user: tester2 Message text: Hi!
+[05-10 16:38:13,914, 44012] com.textme.server.ServerThread Updated user message in dialogue between tester2 and tester1 message text: Hi!
+[05-10 16:38:21,396, 51494] com.textme.server.ServerThread New message has been added. From user: tester2 To user: tester1 Message text: How are you?
+[05-10 16:38:21,396, 51494] com.textme.server.ServerThread New message has been sent. From user: tester2 To user: tester1 Message text: How are you?
+[05-10 16:38:21,503, 51601] com.textme.server.ServerThread Updated user message in dialogue between tester1 and tester2 message text: How are you?
+[05-10 16:38:30,535, 60633] com.textme.server.ServerThread New message has been added. From user: tester1 To user: tester2 Message text: I'm good, thanx
+[05-10 16:38:30,536, 60634] com.textme.server.ServerThread New message has been sent. From user: tester1 To user: tester2 Message text: I'm good, thanx

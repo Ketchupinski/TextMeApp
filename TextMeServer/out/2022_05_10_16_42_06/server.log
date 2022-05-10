@@ -1,0 +1,99 @@
+[05-10 16:42:18,682, 12925] com.textme.server.ServerThread New thread started!
+[05-10 16:42:18,715, 12958] com.textme.server.ServerThread User 1 successfully authorized
+[05-10 16:42:19,316, 13559] com.textme.server.ServerThread User tester10 updated dialogues
+[05-10 16:42:26,751, 20994] com.textme.server.ServerThread New thread started!
+[05-10 16:42:26,766, 21009] com.textme.server.ServerThread User 1 successfully authorized
+[05-10 16:42:27,347, 21590] com.textme.server.ServerThread User tester11 updated dialogues
+[05-10 16:42:35,694, 29937] com.textme.server.ServerThread Sent updating messages from user: tester11 to user: tester10 message text: Hi!
+[05-10 16:42:35,698, 29941] com.textme.server.ServerThread Sent updating messages from user: tester11 to user: tester10 message text: Hi!
+[05-10 16:42:35,700, 29943] com.textme.server.ServerThread Sent updating messages from user: tester11 to user: tester10 message text: How are you?
+[05-10 16:42:35,704, 29947] com.textme.server.ServerThread Sent updating messages from user: tester11 to user: tester10 message text: Good
+[05-10 16:42:35,707, 29950] com.textme.server.ServerThread Sent updating messages from user: tester11 to user: tester10 message text: Привіт
+[05-10 16:42:35,709, 29952] com.textme.server.ServerThread Sent updating messages from user: tester11 to user: tester10 message text: Привіт, як ти там
+[05-10 16:42:35,711, 29954] com.textme.server.ServerThread Sent updating messages from user: tester11 to user: tester10 message text: Нічого, все добре, а ти
+[05-10 16:42:35,713, 29956] com.textme.server.ServerThread Sent updating messages from user: tester11 to user: tester10 message text: Також, дякую
+[05-10 16:42:37,024, 31267] com.textme.server.ServerThread Sent updating messages from user: tester10 to user: admin message text: Hello, nice to see you at TextMe!
+[05-10 16:42:37,348, 31591] com.textme.server.ServerThread Sent updating messages from user: tester10 to user: tester11 message text: Hi!
+[05-10 16:42:37,349, 31592] com.textme.server.ServerThread Sent updating messages from user: tester10 to user: tester11 message text: Hi!
+[05-10 16:42:37,351, 31594] com.textme.server.ServerThread Sent updating messages from user: tester10 to user: tester11 message text: How are you?
+[05-10 16:42:37,352, 31595] com.textme.server.ServerThread Sent updating messages from user: tester10 to user: tester11 message text: Good
+[05-10 16:42:37,354, 31597] com.textme.server.ServerThread Sent updating messages from user: tester10 to user: tester11 message text: Привіт
+[05-10 16:42:37,356, 31599] com.textme.server.ServerThread Sent updating messages from user: tester10 to user: tester11 message text: Привіт, як ти там
+[05-10 16:42:37,358, 31601] com.textme.server.ServerThread Sent updating messages from user: tester10 to user: tester11 message text: Нічого, все добре, а ти
+[05-10 16:42:37,359, 31602] com.textme.server.ServerThread Sent updating messages from user: tester10 to user: tester11 message text: Також, дякую
+[05-10 16:42:44,844, 39087] com.textme.server.ServerThread New message has been added. From user: tester10 To user: tester11 Message text: Привіт
+[05-10 16:42:44,845, 39088] com.textme.server.ServerThread New message has been sent. From user: tester10 To user: tester11 Message text: Привіт
+[05-10 16:42:44,926, 39169] com.textme.server.ServerThread Updated user message in dialogue between tester11 and tester10 message text: Привіт
+[05-10 16:42:49,908, 44151] com.textme.server.ServerThread New message has been added. From user: tester11 To user: tester10 Message text: Як ти сьогодні
+[05-10 16:42:49,909, 44152] com.textme.server.ServerThread New message has been sent. From user: tester11 To user: tester10 Message text: Як ти сьогодні
+[05-10 16:42:49,925, 44168] com.textme.server.ServerThread Updated user message in dialogue between tester10 and tester11 message text: Як ти сьогодні
+[05-10 16:42:57,116, 51359] com.textme.server.ServerThread New message has been added. From user: tester10 To user: tester11 Message text: Добре, а ти як там
+[05-10 16:42:57,116, 51359] com.textme.server.ServerThread New message has been sent. From user: tester10 To user: tester11 Message text: Добре, а ти як там
+[05-10 16:42:57,154, 51397] com.textme.server.ServerThread Updated user message in dialogue between tester11 and tester10 message text: Добре, а ти як там
+[05-10 16:43:04,523, 58766] com.textme.server.ServerThread New message has been added. From user: tester11 To user: tester10 Message text: Також, все супер!
+[05-10 16:43:04,523, 58766] com.textme.server.ServerThread New message has been sent. From user: tester11 To user: tester10 Message text: Також, все супер!
+[05-10 16:43:04,599, 58842] com.textme.server.ServerThread Updated user message in dialogue between tester10 and tester11 message text: Також, все супер!
+[05-10 16:43:14,037, 68280] com.textme.server.ServerThread New message has been added. From user: tester10 To user: tester11 Message text: Чому все супер?
+[05-10 16:43:14,037, 68280] com.textme.server.ServerThread New message has been sent. From user: tester10 To user: tester11 Message text: Чому все супер?
+[05-10 16:43:14,068, 68311] com.textme.server.ServerThread Updated user message in dialogue between tester11 and tester10 message text: Чому все супер?
+[05-10 16:43:24,829, 79072] com.textme.server.ServerThread New message has been added. From user: tester11 To user: tester10 Message text: Тому що я отримав пенсію!
+[05-10 16:43:24,829, 79072] com.textme.server.ServerThread New message has been sent. From user: tester11 To user: tester10 Message text: Тому що я отримав пенсію!
+[05-10 16:43:24,837, 79080] com.textme.server.ServerThread Updated user message in dialogue between tester10 and tester11 message text: Тому що я отримав пенсію!
+[05-10 16:43:28,922, 83165] com.textme.server.ServerThread New message has been added. From user: tester10 To user: tester11 Message text: О, вітаю!
+[05-10 16:43:28,922, 83165] com.textme.server.ServerThread New message has been sent. From user: tester10 To user: tester11 Message text: О, вітаю!
+[05-10 16:43:28,956, 83199] com.textme.server.ServerThread Updated user message in dialogue between tester11 and tester10 message text: О, вітаю!
+[05-10 16:43:37,793, 92036] com.textme.server.ServerThread Connection reset
+[05-10 16:43:39,211, 93454] com.textme.server.ServerThread Sent updating messages from user: tester10 to user: admin message text: Hello, nice to see you at TextMe!
+[05-10 16:43:39,635, 93878] com.textme.server.ServerThread Sent updating messages from user: tester10 to user: tester11 message text: Hi!
+[05-10 16:43:39,635, 93878] com.textme.server.ServerThread Sent updating messages from user: tester10 to user: tester11 message text: Hi!
+[05-10 16:43:39,636, 93879] com.textme.server.ServerThread Sent updating messages from user: tester10 to user: tester11 message text: How are you?
+[05-10 16:43:39,637, 93880] com.textme.server.ServerThread Sent updating messages from user: tester10 to user: tester11 message text: Good
+[05-10 16:43:39,638, 93881] com.textme.server.ServerThread Sent updating messages from user: tester10 to user: tester11 message text: Привіт
+[05-10 16:43:39,639, 93882] com.textme.server.ServerThread Sent updating messages from user: tester10 to user: tester11 message text: Привіт, як ти там
+[05-10 16:43:39,640, 93883] com.textme.server.ServerThread Sent updating messages from user: tester10 to user: tester11 message text: Нічого, все добре, а ти
+[05-10 16:43:39,641, 93884] com.textme.server.ServerThread Sent updating messages from user: tester10 to user: tester11 message text: Також, дякую
+[05-10 16:43:39,641, 93884] com.textme.server.ServerThread Sent updating messages from user: tester10 to user: tester11 message text: Привіт
+[05-10 16:43:39,642, 93885] com.textme.server.ServerThread Sent updating messages from user: tester10 to user: tester11 message text: Як ти сьогодні
+[05-10 16:43:39,643, 93886] com.textme.server.ServerThread Sent updating messages from user: tester10 to user: tester11 message text: Добре, а ти як там
+[05-10 16:43:39,644, 93887] com.textme.server.ServerThread Sent updating messages from user: tester10 to user: tester11 message text: Також, все супер!
+[05-10 16:43:39,645, 93888] com.textme.server.ServerThread Sent updating messages from user: tester10 to user: tester11 message text: Чому все супер?
+[05-10 16:43:39,646, 93889] com.textme.server.ServerThread Sent updating messages from user: tester10 to user: tester11 message text: Тому що я отримав пенсію!
+[05-10 16:43:39,647, 93890] com.textme.server.ServerThread Sent updating messages from user: tester10 to user: tester11 message text: О, вітаю!
+[05-10 16:43:40,901, 95144] com.textme.server.ServerThread Sent updating messages from user: tester10 to user: admin message text: Hello, nice to see you at TextMe!
+[05-10 16:43:51,938, 106181] com.textme.server.ServerThread New thread started!
+[05-10 16:43:51,959, 106202] com.textme.server.ServerThread New user successfully registered: 1
+[05-10 16:43:55,408, 109651] com.textme.server.ServerThread User 1 successfully authorized
+[05-10 16:43:55,922, 110165] com.textme.server.ServerThread User tester12 updated dialogues
+[05-10 16:44:08,465, 122708] com.textme.server.ServerThread New message has been added. From user: tester10 To user: tester12 Message text: Hi!
+[05-10 16:44:08,465, 122708] com.textme.server.ServerThread New message has been sent. From user: tester10 To user: tester12 Message text: Hi!
+[05-10 16:44:08,467, 122710] com.textme.server.ServerThread User tester10 updated dialogues
+[05-10 16:44:10,005, 124248] com.textme.server.ServerThread Sent updating messages from user: tester12 to user: admin message text: Hello, nice to see you at TextMe!
+[05-10 16:44:10,125, 124368] com.textme.server.ServerThread Updated user dialogues to usertester12
+[05-10 16:44:11,145, 125388] com.textme.server.ServerThread Sent updating messages from user: tester12 to user: tester10 message text: Hi!
+[05-10 16:44:15,372, 129615] com.textme.server.ServerThread Sent updating messages from user: tester10 to user: tester12 message text: Hi!
+[05-10 16:44:24,814, 139057] com.textme.server.ServerThread New message has been added. From user: tester12 To user: tester10 Message text: Що ні?
+[05-10 16:44:24,814, 139057] com.textme.server.ServerThread New message has been sent. From user: tester12 To user: tester10 Message text: Що ні?
+[05-10 16:44:24,865, 139108] com.textme.server.ServerThread Updated user message in dialogue between tester10 and tester12 message text: Що ні?
+[05-10 16:44:32,505, 146748] com.textme.server.ServerThread New message has been added. From user: tester10 To user: tester12 Message text: Це привіт по англійськи
+[05-10 16:44:32,506, 146749] com.textme.server.ServerThread New message has been sent. From user: tester10 To user: tester12 Message text: Це привіт по англійськи
+[05-10 16:44:32,566, 146809] com.textme.server.ServerThread Updated user message in dialogue between tester12 and tester10 message text: Це привіт по англійськи
+[05-10 16:44:43,439, 157682] com.textme.server.ServerThread New message has been added. From user: tester12 To user: tester10 Message text: Зрозуміло, тому Так!
+[05-10 16:44:43,439, 157682] com.textme.server.ServerThread New message has been sent. From user: tester12 To user: tester10 Message text: Зрозуміло, тому Так!
+[05-10 16:44:43,463, 157706] com.textme.server.ServerThread Updated user message in dialogue between tester10 and tester12 message text: Зрозуміло, тому Так!
+[05-10 16:44:47,931, 162174] com.textme.server.ServerThread New message has been added. From user: tester10 To user: tester12 Message text: Що так?
+[05-10 16:44:47,931, 162174] com.textme.server.ServerThread New message has been sent. From user: tester10 To user: tester12 Message text: Що так?
+[05-10 16:44:48,036, 162279] com.textme.server.ServerThread Updated user message in dialogue between tester12 and tester10 message text: Що так?
+[05-10 16:45:03,532, 177775] com.textme.server.ServerThread New message has been added. From user: tester12 To user: tester10 Message text: Це як справи по іспанськи
+[05-10 16:45:03,532, 177775] com.textme.server.ServerThread New message has been sent. From user: tester12 To user: tester10 Message text: Це як справи по іспанськи
+[05-10 16:45:03,620, 177863] com.textme.server.ServerThread Updated user message in dialogue between tester10 and tester12 message text: Це як справи по іспанськи
+[05-10 16:45:10,930, 185173] com.textme.server.ServerThread New message has been added. From user: tester10 To user: tester12 Message text: Ти вже це придумав...
+[05-10 16:45:10,930, 185173] com.textme.server.ServerThread New message has been sent. From user: tester10 To user: tester12 Message text: Ти вже це придумав...
+[05-10 16:45:10,982, 185225] com.textme.server.ServerThread Updated user message in dialogue between tester12 and tester10 message text: Ти вже це придумав...
+[05-10 16:45:18,301, 192544] com.textme.server.ServerThread New message has been added. From user: tester12 To user: tester10 Message text: Ну і що?
+[05-10 16:45:18,301, 192544] com.textme.server.ServerThread New message has been sent. From user: tester12 To user: tester10 Message text: Ну і що?
+[05-10 16:45:18,310, 192553] com.textme.server.ServerThread Updated user message in dialogue between tester10 and tester12 message text: Ну і що?
+[05-10 16:45:26,927, 201170] com.textme.server.ServerThread New message has been added. From user: tester10 To user: tester12 Message text: Ясно, я офаюсь
+[05-10 16:45:26,927, 201170] com.textme.server.ServerThread New message has been sent. From user: tester10 To user: tester12 Message text: Ясно, я офаюсь
+[05-10 16:45:26,994, 201237] com.textme.server.ServerThread Updated user message in dialogue between tester12 and tester10 message text: Ясно, я офаюсь
+[05-10 16:45:30,333, 204576] com.textme.server.ServerThread Connection reset
+[05-10 16:45:31,704, 205947] com.textme.server.ServerThread Connection reset

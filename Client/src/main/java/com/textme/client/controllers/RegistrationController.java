@@ -1,5 +1,6 @@
 package com.textme.client.controllers;
 
+import com.textme.client.service.Connector;
 import com.textme.client.GUISceneService;
 import com.textme.client.Main;
 import javafx.event.ActionEvent;
@@ -56,7 +57,7 @@ public class RegistrationController {
         if (!loginField.getText().isBlank() || !passField.getText().isBlank()) {
             String login = loginField.getText();
             String pass = passField.getText();
-            if (Main.getClient().registerUser(login, pass)) {
+            if (Connector.getClient().registerUser(login, pass)) {
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setTitle("Success");
                 alert.setHeaderText("You've registered as " + login + "!");

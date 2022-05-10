@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
@@ -8,12 +9,13 @@
 <?import javafx.scene.layout.VBox?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="807.0" prefWidth="1131.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.textme.client.controllers.MessagesController">
-    <ListView fx:id="messagesList" prefHeight="807.0" prefWidth="353.0" />
-    <TextField fx:id="messageText" layoutX="353.0" layoutY="771.0" prefHeight="36.0" prefWidth="673.0" />
-    <ScrollPane fx:id="textPane" layoutX="353.0" prefHeight="771.0" prefWidth="778.0">
-      <content>
-         <VBox fx:id="messagesBox" prefHeight="768.0" prefWidth="776.0" />
-      </content>
+    <ListView fx:id="messagesList" layoutY="37.0" prefHeight="734.0" prefWidth="353.0" />
+    <TextField fx:id="messageText" layoutX="353.0" layoutY="771.0" prefHeight="36.0" prefWidth="673.0" promptText="Write a message..." />
+    <ScrollPane fx:id="textPane" hmax="200.0" layoutX="353.0" prefHeight="771.0" prefWidth="778.0" scaleShape="false">
+        <VBox fx:id="messagesBox" prefHeight="768.0" prefWidth="776.0" scaleShape="false" />
     </ScrollPane>
     <Button fx:id="sendMessageButton" layoutX="1026.0" layoutY="771.0" mnemonicParsing="false" onAction="#sendMessage" prefHeight="36.0" prefWidth="105.0" text="Send" />
+   <Button fx:id="newDialogue" layoutX="312.0" layoutY="771.0" mnemonicParsing="false" onAction="#startNewDialogue" prefHeight="36.0" prefWidth="41.0" text="+" />
+   <TextField fx:id="newDialogueField" layoutY="771.0" prefHeight="36.0" prefWidth="313.0" promptText="User login you want write to" />
+   <Label fx:id="userNick" layoutY="2.0" prefHeight="36.0" prefWidth="353.0" text="Label" />
 </AnchorPane>

@@ -1,5 +1,6 @@
 package com.textme.client.controllers;
 
+import com.textme.client.service.Connector;
 import com.textme.client.GUISceneService;
 import com.textme.client.Main;
 import javafx.event.ActionEvent;
@@ -62,28 +63,28 @@ public class LoginController {
     }
 
     @FXML
-    public void loginUser(ActionEvent actionEvent) throws IOException, ClassNotFoundException, ExecutionException, InterruptedException {
+    public void loginUser(ActionEvent actionEvent) throws IOException, ExecutionException, InterruptedException {
         if (passCheckBox.isSelected()) {
             passField.setText(textPassField.getText());
         }
         if (!loginField.getText().isBlank() || !passField.getText().isBlank()) {
             String login = loginField.getText();
             String pass = passField.getText();
-            boolean check = Main.getClient().loginUser(login, pass);
+            boolean check = Connector.getClient().loginUser(login, pass);
             Alert alert;
             if (check) {
                 alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setTitle("Success");
                 alert.setHeaderText("You've login as " + login + "!");
                 alert.showAndWait();
-                Main.getClient().setClientLogin(login); // save users login
+                Connector.getClient().setClientLogin(login); // save users login
 
                 GUISceneService service = new GUISceneService();
                 Node node = ((Node)actionEvent.getSource());
                 String CSS = Objects.requireNonNull(Main.class.
                         getResource("massages-stylesheet.css")).toExternalForm();
                 Stage stage = service.createStage("massages-view.fxml", node, CSS);
-                stage.setResizable(true);
+                stage.setResizable(false);
             }
             else {
                 alert = new Alert(Alert.AlertType.WARNING);

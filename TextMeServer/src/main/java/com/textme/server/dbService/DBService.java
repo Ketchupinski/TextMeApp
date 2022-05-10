@@ -1,5 +1,6 @@
 package com.textme.server.dbService;
 
+import com.textme.server.PropertiesService;
 import com.textme.server.dbService.dao.MessageDAO;
 import com.textme.server.dbService.dao.UsersDAO;
 import com.textme.server.dbService.dataSets.MessagesDataSet;
@@ -32,16 +33,15 @@ public class DBService {
         }
     }
 
-    public synchronized long addUser(String name, String pass) throws DBException {
+    public synchronized void addUser(String name, String pass) throws DBException {
         try {
             connection.setAutoCommit(false);
             UsersDAO dao = new UsersDAO(connection);
             if (!isUserExist(name)) { // check if this user already exist
                 dao.insertUser(name, pass);
                 connection.commit();
-                return dao.getUserId(name);
+                dao.getUserId(name);
             }
-            return 0;
         } catch (SQLException e) {
             try {
                 connection.rollback();
@@ -117,10 +117,10 @@ public class DBService {
         Iterator<MessagesDataSet> i2 = qTwo.iterator();
         do {
             if (i1.hasNext()) {
-                mQueue.add(i1.next());
+                mQueue.offer(i1.next());
             }
             if (i2.hasNext()) {
-                mQueue.add(i2.next());
+                mQueue.offer(i2.next());
             }
         } while (i1.hasNext() || i2.hasNext());
         return mQueue;
@@ -163,7 +163,7 @@ public class DBService {
 
             while(!dialogues.isEmpty()) {
                 long userID = dialogues.poll();
-                dialoguesNames.add(userDAO.getUserLogin(userID));
+                dialoguesNames.offer(userDAO.getUserLogin(userID));
             }
             return dialoguesNames;
         } catch (SQLException e) {
@@ -189,6 +189,12 @@ public class DBService {
                     getDeclaredConstructor().newInstance());
 
             StringBuilder url = new StringBuilder();
+            String dbType = PropertiesService.getProperty("db_type");
+            String hostName = PropertiesService.getProperty("db_host_name");
+            String port = PropertiesService.getProperty("db_port");
+            String dbName= PropertiesService.getProperty("db_name");
+            String dbLogin = PropertiesService.getProperty("db_login");
+            String dbPassword = PropertiesService.getProperty("db_password");
             url.
                     append("jdbc:postgresql://").        //db type
                     append("localhost:").           //host name

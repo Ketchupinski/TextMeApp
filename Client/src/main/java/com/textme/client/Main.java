@@ -14,20 +14,6 @@ import java.util.Objects;
 
 
 public class Main extends Application {
-    private static final Client client;
-
-    static {
-        try {
-            client = new Client();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    public static Client getClient() {
-        return client;
-    }
-
     public static void main(String[] args) {
         launch();
     }

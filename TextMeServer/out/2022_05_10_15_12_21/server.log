@@ -1,0 +1,71 @@
+[05-10 15:12:36,891, 16132] com.textme.server.ServerThread New thread started!
+[05-10 15:12:36,957, 16198] com.textme.server.ServerThread User admin successfully authorized
+[05-10 15:12:37,472, 16713] com.textme.server.ServerThread User admin updated dialogues
+[05-10 15:12:39,740, 18981] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: Hello, we're happy to see you at TextMe™ messenger. This is a simple, helpful messaging app that keeps you connected with the people who matter most. You can start new dialogue just pressing "+" button. If you have some troubles or propositions you can contact us just right here. Good texting!
+[05-10 15:12:39,742, 18983] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: nu, zdarova
+[05-10 15:12:39,746, 18987] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: zdarova, bro
+[05-10 15:12:39,748, 18989] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: sho tam?
+[05-10 15:12:39,751, 18992] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: sho tam?
+[05-10 15:12:39,754, 18995] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: yak ti?
+[05-10 15:12:39,756, 18997] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: Da vidsosi ubludok
+[05-10 15:12:39,757, 18998] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: VIlezay z tanka, mraz!
+[05-10 15:12:39,759, 19000] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: zdarova
+[05-10 15:12:39,764, 19005] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: hey
+[05-10 15:12:39,767, 19008] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: sho hey
+[05-10 15:12:39,769, 19010] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: nicho
+[05-10 15:12:39,771, 19012] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: eblo
+[05-10 15:12:39,773, 19014] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: pososi
+[05-10 15:12:39,775, 19016] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: 123
+[05-10 15:12:39,779, 19020] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: 123
+[05-10 15:12:39,781, 19022] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: 123
+[05-10 15:12:39,783, 19024] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: 123123
+[05-10 15:12:39,785, 19026] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: 4124
+[05-10 15:12:39,788, 19029] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: 532523525
+[05-10 15:12:39,790, 19031] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: sacascasc
+[05-10 15:12:39,793, 19034] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: xzcasdqw
+[05-10 15:12:39,797, 19038] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: rwqrqwrqwr
+[05-10 15:12:39,799, 19040] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: zxvzxvzvxzxv
+[05-10 15:12:39,801, 19042] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: 123123123
+[05-10 15:12:39,802, 19043] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+[05-10 15:12:39,805, 19046] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: sosi
+[05-10 15:12:39,807, 19048] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: sam sosi
+[05-10 15:12:39,810, 19051] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: ti axuel, eblo?
+[05-10 15:12:39,813, 19054] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: soso make pls
+[05-10 15:12:39,815, 19056] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: 123
+[05-10 15:12:39,817, 19058] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: soso make pls
+[05-10 15:12:39,818, 19059] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: a moje meni make soso?
+[05-10 15:12:39,820, 19061] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: pososesh, ok?
+[05-10 15:12:39,823, 19064] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: pososi chlen, Valerchik
+[05-10 15:12:39,826, 19067] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: Valera, allo
+[05-10 15:12:39,830, 19071] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: Vidday salo!
+[05-10 15:12:39,833, 19074] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: Ne viddam!
+[05-10 15:12:39,836, 19077] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: Pososesh
+[05-10 15:12:39,838, 19079] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: Ne
+[05-10 15:12:39,843, 19084] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: Posh?
+[05-10 15:12:39,847, 19088] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: 1
+[05-10 15:12:39,850, 19091] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: Hello, Valeriy Victorovish
+[05-10 15:12:39,852, 19093] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: Sho?
+[05-10 15:12:39,856, 19097] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: Da pishov ti naxuy
+[05-10 15:12:39,858, 19099] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: Chogo
+[05-10 15:12:39,862, 19103] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: A?
+[05-10 15:12:39,869, 19110] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: Proso tak
+[05-10 15:12:39,872, 19113] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: Shish
+[05-10 15:12:39,874, 19115] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: Sho ti
+[05-10 15:12:39,876, 19117] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: yak tam?
+[05-10 15:12:39,880, 19121] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: Yak jituha
+[05-10 15:12:39,883, 19124] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: Nicho, a ti sho
+[05-10 15:12:39,898, 19139] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: Toje
+[05-10 15:12:39,900, 19141] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: Aga
+[05-10 15:12:39,903, 19144] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: ya ebal
+[05-10 15:12:39,905, 19146] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: ya ebal
+[05-10 15:12:39,907, 19148] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: sho ti ebal
+[05-10 15:12:39,909, 19150] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: vidosesh?
+[05-10 15:12:39,911, 19152] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: pososi pls
+[05-10 15:12:39,915, 19156] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: Valera, tse piszda
+[05-10 15:12:39,919, 19160] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: Voni pishut i pishut
+[05-10 15:12:39,923, 19164] com.textme.server.ServerThread Sent updating messages from user: admin to user: valera message text: Ya v tilte
+[05-10 15:12:47,881, 27122] com.textme.server.ServerThread New message has been added. From user: admin To user: valera Message text: Hi, Valerchik
+[05-10 15:12:47,882, 27123] com.textme.server.ServerThread New message has been sent. From user: admin To user: valera Message text: Hi, Valerchik
+[05-10 15:12:59,140, 38381] com.textme.server.ServerThread New message has been added. From user: admin To user: valera Message text: Yak ti tam?
+[05-10 15:12:59,141, 38382] com.textme.server.ServerThread New message has been sent. From user: admin To user: valera Message text: Yak ti tam?
+[05-10 15:13:07,517, 46758] com.textme.server.ServerThread Connection reset
