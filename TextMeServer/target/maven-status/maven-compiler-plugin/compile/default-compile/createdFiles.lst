@@ -1,0 +1,14 @@
+com\textme\server\dbService\dao\MessageDAO.class
+com\textme\server\dbService\dataSets\UsersDataSet.class
+com\textme\server\dbService\DBException.class
+com\textme\connection\PackageType.class
+com\textme\server\dbService\dao\UsersDAO.class
+com\textme\server\dbService\DBService.class
+com\textme\server\dbService\dataSets\MessagesDataSet.class
+com\textme\server\PropertiesService.class
+com\textme\server\dbService\executor\ResultHandler.class
+com\textme\connection\Package.class
+com\textme\connection\Connection.class
+com\textme\server\dbService\executor\Executor.class
+com\textme\server\ServerThread.class
+com\textme\server\Server.class

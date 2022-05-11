@@ -247,16 +247,16 @@ public class ServerThread extends Thread {
                     if (Objects.equals(user.getUserPass(), information[1])) {
                         connection.send(new Package(PackageType.USER_LOGIN_SUCCESSFULLY,
                                 information[0] + " " + information[1]));
-                        logger.info("User " + information[1] + " successfully authorized");
+                        logger.info("User " + information[0] + " successfully authorized");
                     } else {
                         connection.send(new Package(PackageType.USER_LOGIN_ERROR,
                                 information[0] + " " + information[1]));
-                        logger.info("User " + information[1] + " failed authorization");
+                        logger.info("User " + information[0] + " failed authorization");
                     }
                 } else {
                     connection.send(new Package(PackageType.USER_LOGIN_ERROR,
                             information[0] + " " + information[1]));
-                    logger.info("User " + information[1] + " failed authorization");
+                    logger.info("User " + information[0] + " failed authorization");
                 }
 
             } else if (response.getType() == PackageType.USER_LOG_OUT) {
