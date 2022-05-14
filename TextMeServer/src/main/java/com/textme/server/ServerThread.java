@@ -8,6 +8,7 @@ import com.textme.server.dbService.DBService;
 import com.textme.server.dbService.dataSets.MessagesDataSet;
 import com.textme.server.dbService.dataSets.UsersDataSet;
 
+import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -97,7 +98,7 @@ public class ServerThread extends Thread {
                             " To user: " + response.getToUser() +
                             " Message text: " + response.getMessageText());
                 } catch (DBException e) {
-                    e.printStackTrace();
+                    logger.log(Level.ERROR, e.getMessage());
                 }
                 Package pack = new Package(
                         PackageType.SEND_TEXT_MESSAGE, response.getMessageText(),

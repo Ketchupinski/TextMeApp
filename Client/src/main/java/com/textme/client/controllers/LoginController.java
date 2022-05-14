@@ -7,6 +7,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -58,6 +59,8 @@ public class LoginController {
         String CSS = Objects.requireNonNull(Main.class.
                 getResource("start-stylesheet.css")).toExternalForm();
         Stage stage = service.createStage("start-view.fxml", node, CSS);
+        stage.getIcons().add(new Image(Objects.requireNonNull
+                (Main.class.getResourceAsStream("TextMe_icon.png"))));
         stage.setResizable(false);
         stage.show();
     }
@@ -84,6 +87,8 @@ public class LoginController {
                 String CSS = Objects.requireNonNull(Main.class.
                         getResource("massages-stylesheet.css")).toExternalForm();
                 Stage stage = service.createStage("massages-view.fxml", node, CSS);
+                stage.getIcons().add(new Image(Objects.requireNonNull
+                        (Main.class.getResourceAsStream("TextMe_icon.png"))));
                 stage.setResizable(false);
             }
             else {

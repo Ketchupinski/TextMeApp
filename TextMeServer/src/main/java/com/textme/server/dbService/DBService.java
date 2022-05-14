@@ -183,7 +183,7 @@ public class DBService {
         }
     }
 
-    public synchronized static Connection getPostgresConnection() { // todo: make connection from prop file
+    public synchronized static Connection getPostgresConnection() {
         try {
             DriverManager.registerDriver((Driver) Class.forName("org.postgresql.Driver").
                     getDeclaredConstructor().newInstance());
@@ -195,13 +195,13 @@ public class DBService {
             String dbName= PropertiesService.getProperty("db_name");
             String dbLogin = PropertiesService.getProperty("db_login");
             String dbPassword = PropertiesService.getProperty("db_password");
-            url.
-                    append("jdbc:postgresql://").        //db type
-                    append("localhost:").           //host name
-                    append("5432/").                //port
-                    append("postgres?").          //db name
-                    append("user=postgres&").          //login
-                    append("password=mady525");       //password
+            url
+                    .append(dbType).append("://")
+                    .append(hostName).append(":")
+                    .append(port).append("/")
+                    .append(dbName).append("?")
+                    .append("user=").append(dbLogin).append("&")
+                    .append("password=").append(dbPassword);
 
             System.out.println("URL: " + url + "\n");
 

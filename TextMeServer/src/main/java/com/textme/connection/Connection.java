@@ -22,7 +22,6 @@ public class Connection implements Closeable {
             writer.writeObject(p);
         }
     }
-
     public Package receive() throws IOException, ClassNotFoundException {
         synchronized (this.reader) {
             return (Package) reader.readObject();

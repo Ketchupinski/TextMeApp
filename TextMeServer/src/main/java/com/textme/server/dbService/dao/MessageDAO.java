@@ -18,7 +18,8 @@ public class MessageDAO {
     }
 
     public MessagesDataSet getMessageByID(long id) {
-        return executor.execQuery("select * from messages where id=" + id, result -> {
+        return executor.execQuery("select * from messages where id=" + id,
+                result -> {
             result.next();
             return new MessagesDataSet(result.getLong(1),
                     result.getString(2),

@@ -1,0 +1,3 @@
+[05-14 00:35:36,116, 15296] com.textme.server.ServerThread New thread started!
+[05-14 00:35:36,160, 15340] com.textme.server.ServerThread User admin failed authorization
+[05-14 00:35:56,915, 36095] com.textme.server.ServerThread Connection reset
