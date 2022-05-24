@@ -91,22 +91,30 @@ public class ServerThread extends Thread {
             Package response = connection.receive();
             if (response.getType() == PackageType.SEND_TEXT_MESSAGE &&
                     response.getMessageText() != null) {
-                String messageText = response.getMessageText();
-                try {
-                    dbService.addMessage(messageText, response.getFromUser(), response.getToUser());
-                    logger.info("New message has been added. From user: " + response.getFromUser() +
+                if (dbService.isUserExist(response.getToUser())) {
+                    String messageText = response.getMessageText();
+                    try {
+                        dbService.addMessage(messageText, response.getFromUser(), response.getToUser());
+                        logger.info("New message has been added. From user: " + response.getFromUser() +
+                                " To user: " + response.getToUser() +
+                                " Message text: " + response.getMessageText());
+                    } catch (DBException e) {
+                        logger.log(Level.ERROR, e.getMessage());
+                    }
+                    Package pack = new Package(
+                            PackageType.SEND_TEXT_MESSAGE, response.getMessageText(),
+                            response.getFromUser(), response.getToUser(), response.getMessageDate());
+                    connection.send(pack);
+                    logger.info("New message has been sent. From user: " + response.getFromUser() +
                             " To user: " + response.getToUser() +
                             " Message text: " + response.getMessageText());
-                } catch (DBException e) {
-                    logger.log(Level.ERROR, e.getMessage());
+                } else {
+                    Package pack = new Package(PackageType.USER_NOT_FOUND,
+                            response.getFromUser(),
+                            response.getToUser());
+                    connection.send(pack);
+                    logger.error("User " + response.getToUser() + " hasn't found. Sent error message to client");
                 }
-                Package pack = new Package(
-                        PackageType.SEND_TEXT_MESSAGE, response.getMessageText(),
-                        response.getFromUser(), response.getToUser(), response.getMessageDate());
-                connection.send(pack);
-                logger.info("New message has been sent. From user: " + response.getFromUser() +
-                        " To user: " + response.getToUser() +
-                        " Message text: " + response.getMessageText());
             } else if (response.getType() == PackageType.GET_USERS_MESSAGES
                     && response.getFromUser() != null
                     && response.getToUser() != null

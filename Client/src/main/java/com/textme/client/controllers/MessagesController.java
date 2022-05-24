@@ -66,7 +66,7 @@ public class MessagesController implements Initializable {
     }
 
 
-    public void startNewDialogue(ActionEvent actionEvent)
+    public void startNewDialogue(ActionEvent e)
             throws IOException, ExecutionException, ClassNotFoundException, InterruptedException {
         if (!newDialogueField.getText().isEmpty()) {
             Connector.getClient().sendNewTextMessage(newDialogueField.getText(), "Hi!");

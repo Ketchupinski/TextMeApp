@@ -7,6 +7,7 @@ import com.textme.connection.PackageType;
 import javafx.application.Platform;
 import javafx.concurrent.Service;
 import javafx.concurrent.Task;
+import javafx.scene.control.Alert;
 
 import java.io.IOException;
 import java.util.Objects;
@@ -62,6 +63,14 @@ public class ListenService extends Service<Void> {
                                         receive.getMessageText(), receive.getFromUser(), receive.getToUser());
                             });
                         }
+                    } else if(receive.getType() == PackageType.USER_NOT_FOUND) {
+                        Platform.runLater(() -> {
+                            Alert alert = new Alert(Alert.AlertType.WARNING);
+                            alert.setTitle("User not found");
+                            alert.setHeaderText("User " + receive.getToUser() + " hasn't found.");
+                            alert.setContentText("Please, check user nick that you want to text");
+                            alert.showAndWait();
+                        });
                     }
                 }
             }

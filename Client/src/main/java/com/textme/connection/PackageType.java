@@ -13,5 +13,6 @@ public enum PackageType {
     USER_LOGIN,
     USER_LOGIN_SUCCESSFULLY,
     USER_LOGIN_ERROR,
-    USER_LOG_OUT
+    USER_LOG_OUT,
+    USER_NOT_FOUND
 }
